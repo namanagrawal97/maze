@@ -38,7 +38,10 @@ def find_index(l,t):
         else:
             continue
 def find_jumps(l):
-    jumps=1
+    if len(l)==0:
+        jumps=0
+    else:
+        jumps=1
     for j in range(len(l)-1):
         if l[j+1]-l[j]>=3:
             jumps=jumps+1
@@ -72,7 +75,7 @@ for u in fnames: #goes thru files in the folder.
     n6=[]
     n7=[]
     n8=[]
-    num_of_revisits={}
+    num_of_visits={}
     all_nodes=[n1,n2,n3,n4,n5,n6,n7,n8]
     """
     Loading the data into a dataframe
@@ -117,11 +120,12 @@ for u in fnames: #goes thru files in the folder.
             n8.append(time[i])
         else:
             pass
+    
+    i=1
     for rev in all_nodes:
-        i=0
         # print(rev)
         print(i)
-        num_of_revisits[i]=find_jumps(rev)
+        num_of_visits["n"+str(i)]=find_jumps(rev)
         i=i+1
     fig, ax = plt.subplots()
     ax.set_xlim(0,1444)
