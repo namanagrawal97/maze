@@ -102,7 +102,7 @@ for u in fnames: #goes thru files in the folder.
     x_coord=list(df['Fx1'])
     y_coord=list(df['Fy1'])
     for i in range(0,len(x_coord)-1,1):
-        if(np.sqrt((x_coord[i]-250)**2+(y_coord[i]-250)**2)<=30):
+        if(np.sqrt((x_coord[i]-250)**2+(y_coord[i]-150)**2)<=30):
             n1.append(time[i])
         elif(np.sqrt((x_coord[i]-55)**2+(y_coord[i]-500)**2)<=30):
             n2.append(time[i])
