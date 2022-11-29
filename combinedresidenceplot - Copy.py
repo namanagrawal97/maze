@@ -146,3 +146,4 @@ for u in fnames: #goes thru files in the folder.
     plt.show()
     #         # del x_coord[0:split_point_index]
             # del y_coord[0:split_point_index]
+    # test
