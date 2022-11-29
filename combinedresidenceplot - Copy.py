@@ -47,8 +47,8 @@ def find_jumps(l):
             jumps=jumps+1
         else:
             continue
-    return jumps        
-            
+    return jumps
+
 
 
 
@@ -65,8 +65,8 @@ index=0
 
 
 for u in fnames: #goes thru files in the folder.
-    
-    
+
+
     n1=[]
     n2=[]
     n3=[]
@@ -93,7 +93,7 @@ for u in fnames: #goes thru files in the folder.
          data_header = ['Time', 'Latency', 'Fx1', 'Fy1', 'Fx2', 'Fy2']
     elif(df.shape[1]==4):
          data_header = ['Time', 'Latency', 'Fx1', 'Fy1']
-    
+
     df.columns=data_header
     latency=list(df['Latency'])
     latency[0]=0
@@ -120,7 +120,7 @@ for u in fnames: #goes thru files in the folder.
             n8.append(time[i])
         else:
             pass
-    
+
     i=1
     for rev in all_nodes:
         # print(rev)
@@ -146,4 +146,4 @@ for u in fnames: #goes thru files in the folder.
     plt.show()
     #         # del x_coord[0:split_point_index]
             # del y_coord[0:split_point_index]
-    # test
+    # test test test
